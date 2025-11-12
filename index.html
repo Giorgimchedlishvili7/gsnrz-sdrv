@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CAT CLICKER</title>
+   
+       <progress>
+       </progress>
+    <style>
+        body{
+            background-color: gray;
+        }
+        
+    </style>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #cookie {
+            width: 200px;
+            height: 200px;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+
+        #score {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .upgrade {
+            margin: 10px;
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }pro
+
+        .achievement {
+            margin: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CAT CLICKER</h1>
+    
+    <img id="cat" src="data:image/jpeg;base64,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" alt="Cookie" onclick="clickCookie()">
+    <p id="score">Score: <span id="scoreValue">0</span></p>
+
+    <h2>Upgrades</h2>
+    <p id="clickValue">Click Value: 1</p>
+    
+    <button class="upgrade" onclick="buyUpgrade(10, 2)">Upgrade 1 (Cost: 10 CATS)</button>
+    <button class="upgrade" onclick="buyUpgrade(20, 4)">Upgrade 2 (Cost: 20 CATS)</button>
+
+    <h2>Auto-Clicker</h2>
+    <p id="autoClickerStatus">Auto-Clicker: Off</p>
+    <button class="upgrade" onclick="buyAutoClicker(50, 1)">Buy Auto-Clicker (Cost: 50 CATS)</button>
+    <button class="upgrade" onclick="buyUpgradeAutoClicker(30, 1)">Upgrade Auto-Clicker (Cost: 30 CATS)</button>
+
+    <h2>Achievements</h2>
+    <p class="achievement" id="achievement1">Achievement 1: Not yet achieved</p>
+    <p class="achievement" id="achievement2">Achievement 2: Not yet achieved</p>
+    <p class="achievement" id="achievement2">Achievement 3: Not yet achieved</p>
+    <!-- Add more achievements as needed -->
+
+    <script>
+        // JavaScript code for the cookie clicker game with upgrades, auto-clicker, and achievements
+        var score = 0;
+        var clickValue = 1;
+        var autoClickerEnabled = false;
+        var autoClickerInterval;
+        var upgradeCount = 0;
+        var cookiesAchievementThreshold = 100;
+        var upgradesAchievementThreshold = 5;
+        var autoClickerAchievementThreshold = 1;
+
+        function clickCookie() {
+            score += clickValue;
+            updateScore();
+
+            // Check and update achievements
+            checkAchievements();
+        }
+
+        function updateScore() {
+            document.getElementById("scoreValue").innerText = score;
+        }
+
+        function updateClickValue() {
+            document.getElementById("clickValue").innerText = "Click Value: " + clickValue;
+        }
+
+        function updateAchievement(achievementId, message) {
+            document.getElementById(achievementId).innerText = message;
+        }
+
+        function buyUpgrade(cost, increase) {
+            if (score >= cost) {
+                score -= cost;
+                clickValue += increase;
+                upgradeCount++;
+                updateScore();
+                updateClickValue();
+
+                // Check and update achievements
+                checkAchievements();
+            } else {
+                alert("Not enough cookies to buy this upgrade!");
+            }
+        }
+
+        function buyAutoClicker(cost, initialSpeed) {
+            if (score >= cost && !autoClickerEnabled) {
+                score -= cost;
+                autoClickerEnabled = true;
+                document.getElementById("autoClickerStatus").innerText = "Auto-Clicker: On";
+                autoClickerInterval = setInterval(autoClick, 1000 / initialSpeed);
+                
+                // Check and update achievements
+                checkAchievements();
+            } else if (autoClickerEnabled) {
+                alert("Auto-Clicker is already enabled!");
+            } else {
+                alert("Not enough cookies to buy the Auto-Clicker!");
+            }
+        }
+
+        function buyUpgradeAutoClicker(cost, speedIncrease) {
+            if (score >= cost && autoClickerEnabled) {
+                score -= cost;
+                clearInterval(autoClickerInterval);
+                autoClickerInterval = setInterval(autoClick, 1000 / (1 + speedIncrease));
+                
+                // Check and update achievements
+                checkAchievements();
+            } else {
+                alert("Either Auto-Clicker is not enabled, or not enough cookies to buy this upgrade!");
+            }
+        }
+
+        function autoClick() {
+            score += clickValue;
+            updateScore();
+        }
+
+        function checkAchievements() {
+            // Check and update achievements based on thresholds
+            if (score >= cookiesAchievementThreshold) {
+                updateAchievement("achievement1", "Achievement 1: Unlocked!");
+            }
+
+            if (upgradeCount >= upgradesAchievementThreshold) {
+                updateAchievement("achievement2", "Achievement 2: Unlocked!");
+            }
+
+            if (autoClickerEnabled && score >= autoClickerAchievementThreshold) {
+                // Add more achievements as needed for other thresholds
+            }
+        }
+        
+    </script>
